@@ -1,25 +1,20 @@
 #include "shell.h"
 
-
-int input(char *s,int length);
-
 int main()
 {
-	char *buffer;
-	size_t bufsize = 32;
+	char *buffer = NULL;
+	size_t bufsize = 1;
+	ssize_t checkget;
 
-	buffer = (char *)malloc(bufsize * sizeof(char));
-	if( buffer == NULL)
+	while (checkget != -1)
 	{
-		perror("Unable to allocate buffer");
-		exit(1);
+		write(1, "$ ", 2);
+		checkget = getline(&buffer, &bufsize, stdin);
+		if (checkget == -1)
+			break;
+	       	_strtok(buffer);
 	}
-	printf("$");
-	for (;;)
-	{
-	getline(&buffer,&bufsize,stdin);
-	_strtok(buffer);
-	printf("$");
-	}
+	write(1,"\n",1);
+	free(buffer);
 	return(0);
 }
