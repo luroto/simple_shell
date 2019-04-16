@@ -8,6 +8,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
+#include <stddef.h>
 extern char **environ;
 void _strtok_execv(char *buffer, char *name, int num);
 char *_path(char *str);
