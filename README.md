@@ -11,10 +11,10 @@ After you clone this repository you need to compile its content running the foll
 ``` sh
 gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 ```
-## How to use 
+## How to use
 Run the shell typing ```./hsh``` on your command line. After that, you're able to type any command (one word or with all the path) and get the correspondant output. 
 ## Examples
-``` sh 
+``` sh
 vagrant@vagrant-ubuntu-trusty-64:~/simple_shell$ ./hsh
 $ ls -l
 total 128
