@@ -13,9 +13,7 @@ char *_path(char *str)
 	struct stat st;
 
 	if (stat(str, &st) == 0)
-	{
 		return (str); /* str is a corret arg*/
-	}
 	str = str_concat(s, str);
 	for (i = 0; environ[i] != NULL; i++)
 	{

@@ -25,7 +25,7 @@ void _strtok_execv(char *buffer, char *name, int num)
 		{i++,   tok[i] = _strtok(buffer, " \t\n", 1); }
 		er = "env";
 		if (_strcmp(er, buffer) == 0)
-		{free(buffer), _env(i), free_grid(tok, i) ,exit(0); }
+		{free(buffer), _env(i), free_grid(tok, i), exit(0); }
 		er = "1";
 		aux = _path(temp);
 		if (aux[0] == er[0])
@@ -35,7 +35,7 @@ void _strtok_execv(char *buffer, char *name, int num)
 			tok[0] = aux;
 		ex = execv(tok[0], tok);
 		if (ex == -1)
-		{_error(name, tok[0], num),free_grid(tok, i), exit(0);
+		{_error(name, tok[0], num), free_grid(tok, i), exit(0);
 		}               }
 	if (pid > 0)
 		wait(NULL);
