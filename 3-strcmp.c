@@ -9,7 +9,9 @@
  */
 int _strcmp(char *s1, char *s2)
 {
+
 	int cont1, a = 0;
+
 
 	for (cont1 = 0; s1[cont1]; cont1++)
 	{
