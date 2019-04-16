@@ -9,17 +9,11 @@
 void _error(char *name, char *comand, int num)
 {
 	char *aux = NULL;
-	int len = 0;
 
 	write(2, name, _strlen_recursion(name));
 	write(2, ": ", 2);
 	aux = _convert_num(num);
-	len = _strlen_recursion(aux);
-	if (num < 100)
-	{
-		len = len - 1;
-	}
-	write(2, aux, len);
+	write(2, aux, _strlen_recursion(aux));
 	free(aux);
 	write(2, ": ", 2);
 	write(2, comand, _strlen_recursion(comand));
