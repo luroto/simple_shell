@@ -1,6 +1,3 @@
-ctrlhandler
-main
-vagrant@vagrant-ubuntu-trusty-64:~/simple_shell$ cat getline.c 
 #include "shell.h"
 /**
  *ctrlhandler - receive the comand Crt + C
