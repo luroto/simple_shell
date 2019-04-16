@@ -37,6 +37,10 @@ int main(int argc, char **argv)
 		}
 		_strtok_execv(buffer, argv[0], num);
 	}
+<<<<<<< HEAD
+=======
+	write(1, "\n", 1);
+>>>>>>> 68d5f1bb3bb9d5a01dc8f8c04bf957225c77b010
 	free(buffer);
 	return (0);
 }

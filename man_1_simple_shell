@@ -1,0 +1,56 @@
+.Th simple_shell
+.Dd 15/04/2019
+.Dt simple_shell 1
+.Os simple_shell
+.Sh simple_shell                 \" Section Header - required - don't modify
+.Nm hsh
+.Nd Command line interpreter.
+.Sh SYNOPSIS
+.Nm
+.Op command              \" [file]
+.Op command_string | file
+.Sh DESCRIPTION          \" Section Header - required - don't modify
+simple_shell is a command line interpreter, able to get data typed into the standard input, read it,
+determine if it has a function or not and execute commands if that is the case.
+.Pp
+.PP
+
+A list of tested commands for this shell is presented next:
+.Bl -tag -width -compact
+.It ls\
+Prints a list of files and directories contained in the current directory.
+.It cd \
+Changes the current directory.
+.It pwd\
+Prints the current directory.
+.It cp\
+Copies a given file to another given file. If the second one doesn't exist, it will be created.
+.El
+.Sh GRAMMAR
+This shell is able to receive commands, options and arguments. The very first word typed in the command line will be the argument 0 and it will be executed as a command.
+.Sh BUILT IN
+This simple_shell has two working built in:
+.Nm env
+which prints all the environment variables and
+.Nm exit
+which is one of the options to exit the shell.
+.Sh SIGNALS
+This simple_shell captures the Ctrl + C signal but it hasn't effect on simple_shell.
+.Sh Other types of data
+This simple_shell exits if EOF (Ctrl + D) is captured.
+.Sh FILES                \" File used or created by the topic of the man page
+.Bl -tag -width
+.It Pa /simple_shell/getline.c
+Main function of the code.
+.It Pa /simple_shell/_
+Function which
+.It Pa /simple_shell/
+Function which
+.It Pa /simple_shell/
+Main function of the code.
+.It Pa /simple_shell/
+Function which
+.It Pa /simple_shell/
+.El
+.Sh SEE ALSO
+.Xr bash 1
