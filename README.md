@@ -51,6 +51,7 @@ This shell receives ```env``` for printing a list of environment variables. Also
 This shell exits if you press ```Ctrl + D```. Besides, the shell still works if you press ```Ctrl + C```
 ## Contents
 The set of functions for our shell and other files contained here are the following:
+
 | Filename| Description |
 | ------ | ------ |
 | main.c | Heart of this shell, contains the getline function and sets flow. |
