@@ -16,7 +16,8 @@ char *str_concat(char *s1, char *s2);
 int _strcmp(char *s1, char *s2);
 int _strlen_recursion(char *s);
 int _env(int cont);
-char *_strtok(char *str, char *separador);
+char *_strtok(char *str, char *separator, int flag);
 char *_convert_num(int k);
 void _error(char *name, char *comand, int num);
+void free_grid(char **grid, int height);
 #endif
