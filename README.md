@@ -44,6 +44,13 @@ total 128
 -rw-rw-r-- 1 vagrant vagrant   836 Apr 15 19:47 _strtok_execv.c
 -rw-rw-r-- 1 vagrant vagrant   838 Apr 15 19:44 _strtok_execv.c~
 ```
+
+```
+vagrant@vagrant-ubuntu-trusty-64:~/holbertonschool-low_level_programming/simple_shell$ ./hsh
+pwd
+/home/vagrant/holbertonschool-low_level_programming/simple_shell
+```
+
 ## Features:
 ### Built-in:
 This shell receives ```env``` for printing a list of environment variables. Also, it can handle the ```exit``` built-in for lefting the shell.
@@ -54,10 +61,17 @@ The set of functions for our shell and other files contained here are the follow
 
 | Filename| Description |
 | ------ | ------ |
-| main.c | Heart of this shell, contains the getline function and sets flow. |
-| _strtok | Function that converts the value of the string obtained from getline and convert every value into tokens|
-| _execv| Function that executes the commands stored as tokens from _strtok function|
-| 2-str-concat| Function that concatenates two strings, on this case the full path provided by ```$PATH```|
+| getline.c | Heart of this shell, contains the getline function and sets flow. |
+| _strtok.c | Our custom function that converts the value of the string obtained from getline and convert every value into tokens|
+| _strtok_execv.c| Function that executes the commands stored as tokens from _strtok function|
+| 2-str-concat.c| Function that concatenates two strings, on this case the full path provided by ```$PATH```|
+|2-strlen_recursion|Function that returns the lenght of strings|
+|3-strcmp.c|Function that compares two strings|
+|_env.c|Function to get the contents of env variable|
+|_path.c | Function that look for the full path and concatenates it to the command|
+| _error| Function for displaying the right error message when a command is not found |
+|_convert_num.c | Function for generating the right number of execution of a process |
+|_free_grid.c | Function that frees a two dimensional grid |
 
 ### Authors
 * [**Carolina Andrade**](https://github.com/xica369)
