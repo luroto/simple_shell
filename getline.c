@@ -6,8 +6,8 @@
  */
 void ctrlhandler(__attribute__((unused))int numa)
 {
-        signal(SIGINT, ctrlhandler);
-        write(1, "\n", 1);
+	signal(SIGINT, ctrlhandler);
+	write(1, "\n", 1);
 }
 /**
  *main - receive the info, verific Crt+C Crt+D and exit and exec other fu\
@@ -19,28 +19,28 @@ nc.
  */
 int main(int argc, char **argv)
 {
-        char *buffer = NULL, *aux = "exit\n";
-        size_t bufsize = 1;
-        ssize_t checkget = 0;
-        int num = 0;
+	char *buffer = NULL, *aux = "exit\n";
+	size_t bufsize = 1;
+	ssize_t checkget = 0;
+	int num = 0;
 
-        (void)argc;
-        signal(SIGINT, ctrlhandler);
-        while (checkget != -1)
-        {
-                num++;
-                checkget = getline(&buffer, &bufsize, stdin);
-                if (checkget == -1)
-                {
-                        break;
-                }
-                if (_strcmp(buffer, aux) == 0)
-                {
-                        free(buffer);
-                        exit(0);
-                }
-                _strtok_execv(buffer, argv[0], num);
-        }
-        free(buffer);
-        return (0);
+	(void)argc;
+	signal(SIGINT, ctrlhandler);
+	while (checkget != -1)
+	{
+		num++;
+		checkget = getline(&buffer, &bufsize, stdin);
+		if (checkget == -1)
+		{
+			break;
+		}
+		if (_strcmp(buffer, aux) == 0)
+		{
+			free(buffer);
+			exit(0);
+		}
+		_strtok_execv(buffer, argv[0], num);
+	}
+	free(buffer);
+	return (0);
 }
