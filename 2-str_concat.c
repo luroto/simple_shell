@@ -9,7 +9,7 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int cont = 0, cont1, cont2, cont3;
+	int cont1, cont2, cont3, cont = 0;
 	char *s3;
 
 	if (s1 == NULL)
@@ -26,7 +26,7 @@ char *str_concat(char *s1, char *s2)
 	for (cont2 = 0; s2[cont2]; cont2++)
 	{
 	}
-	s3 = malloc(sizeof(*s3) * (cont1 + cont2) + 1);
+	s3 = malloc(sizeof(char) * (cont1 + cont2 + 1));
 	if (s3 == NULL)
 	{
 		return (NULL);
@@ -43,5 +43,6 @@ char *str_concat(char *s1, char *s2)
 			cont = cont + 1;
 		}
 	}
+	s3[cont3] = '\0';
 	return (s3);
 }
