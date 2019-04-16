@@ -6,13 +6,12 @@
 .Sh SYNOPSIS
 .Nm
 .Op command              \" [file]
-.Op command_string | file  
+.Op command_string | file
 .Sh DESCRIPTION          \" Section Header - required - don't modify
 simple_shell is a command line interpreter, able to get data typed into the standard input, read it, 
 determine if it has a function or not and execute commands if that is the case.
 .Pp
 .PP
-
 A list of tested commands for this shell is presented next:
 .Bl -tag -width -compact
 .It ls\
@@ -27,9 +26,9 @@ Copies a given file to another given file. If the second one doesn't exist, it w
 .Sh GRAMMAR
 This shell is able to receive commands, options and arguments. The very first word typed in the command line will be the argument 0 and it will be executed as a command.
 .Sh BUILT IN
-This simple_shell has two working built in: 
+This simple_shell has two working built in:
 .Nm env
-which prints all the environment variables and 
+which prints all the environment variables and
 .Nm exit
 which is one of the options to exit the shell.
 .Sh SIGNALS
@@ -51,4 +50,4 @@ Function which
 .It Pa /simple_shell/
 .El
 .Sh SEE ALSO
-.Xr bash 1 
+.Xr bash 1
