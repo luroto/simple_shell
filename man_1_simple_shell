@@ -1,8 +1,8 @@
-.Th simple_shell
+.TH simple_shell manpage "15 abril 2019" "version 1.0"
 .Dd 15/04/2019
-.Dt simple_shell 1
-.Os simple_shell
-.Sh simple_shell                 \" Section Header - required - don't modify
+.Sh simple_shell
+.Pp
+.Os simple_shell                 \" Section Header - required - don't modify
 .Nm hsh
 .Nd Command line interpreter.
 .Sh SYNOPSIS
@@ -17,13 +17,13 @@ determine if it has a function or not and execute commands if that is the case.
 
 A list of tested commands for this shell is presented next:
 .Bl -tag -width -compact
-.It ls\
+.It ls \
 Prints a list of files and directories contained in the current directory.
 .It cd \
 Changes the current directory.
-.It pwd\
+.It pwd \
 Prints the current directory.
-.It cp\
+.It cp \
 Copies a given file to another given file. If the second one doesn't exist, it will be created.
 .El
 .Sh GRAMMAR
