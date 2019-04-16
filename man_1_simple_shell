@@ -1,6 +1,8 @@
-.Dd 8/4/10               \" DATE
-.Dt simple_shell      \" Program name and manual section number
-.Th simple_shell,                 \" Section Header - required - don't modify
+.Th simple_shell
+.Dd 15/04/2019
+.Dt simple_shell 1
+.Os simple_shell
+.Sh simple_shell                 \" Section Header - required - don't modify
 .Nm hsh
 .Nd Command line interpreter.
 .Sh SYNOPSIS
@@ -8,10 +10,11 @@
 .Op command              \" [file]
 .Op command_string | file
 .Sh DESCRIPTION          \" Section Header - required - don't modify
-simple_shell is a command line interpreter, able to get data typed into the standard input, read it, 
+simple_shell is a command line interpreter, able to get data typed into the standard input, read it,
 determine if it has a function or not and execute commands if that is the case.
 .Pp
 .PP
+
 A list of tested commands for this shell is presented next:
 .Bl -tag -width -compact
 .It ls\
