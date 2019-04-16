@@ -19,28 +19,32 @@ char *_path(char *str)
 	str = str_concat(s, str);
 	for (i = 0; environ[i] != NULL; i++)
 	{
-		tok = strtok(environ[i], "=");
+		tok = _strtok(environ[i], "=", 0);
 		if (_strcmp(name, tok) == 0)
 		{
 			temp = str_concat(tok, str);
 			if (stat(temp, &st) == 0)
 			{
+				free(tok);
 				free(str);
 				return (temp);
 			}
 			while (tok != NULL)
 			{
-				tok = strtok(NULL, "=:");
+				free(tok);
+				tok = _strtok(environ[i], "=:", 1);
 				free(temp);
 				temp = str_concat(tok, str);
 				if (stat(temp, &st) == 0)
 				{
+					free(tok);
 					free(str);
 					return (temp);
 				}
 			}
 			break;
 		}
+		free(tok);
 	}
 	free(str);
 	temp[0] = '1';
