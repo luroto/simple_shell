@@ -1,6 +1,6 @@
 # simple_shell
 ---
-This is the repository for the custom shell we built as the final project for the first trimester at Holberton School.  
+This is the repository for the custom shell we built as the final project for the first trimester at Holberton School.
 
 ## Description
 This shell is able to get data typed into the standard input, read it, determine if it has a function or not and execute commands if that is the case.
@@ -12,7 +12,7 @@ After you clone this repository you need to compile its content running the foll
 gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 ```
 ## How to use
-Run the shell typing ```./hsh``` on your command line. After that, you're able to type any command (one word or with all the path) and get the correspondant output. 
+Run the shell typing ```./hsh``` on your command line. After that, you're able to type any command (one word or with all the path) and get the correspondant output.
 ## Examples
 ``` sh
 vagrant@vagrant-ubuntu-trusty-64:~/simple_shell$ ./hsh
@@ -57,8 +57,6 @@ The set of functions for our shell and other files contained here are the follow
 | _strtok | Function that converts the value of the string obtained from getline and convert every value into tokens|
 | _execv| Function that executes the commands stored as tokens from _strtok function|
 | 2-str-concat| Function that concatenates two strings, on this case the full path provided by ```$PATH```|
-| | |
-| shell_man_pg | [plugins/googleanalytics/README.md][PlGa] |
 
 ### Authors
 * [**Carolina Andrade**](https://github.com/xica369)
