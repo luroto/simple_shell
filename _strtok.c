@@ -53,5 +53,6 @@ char *_strtok(char *str, char *separator, int flag)
 		tok[n] = str[i];
 		n++;
 	}
+	tok[n] = '\0';
 	return (tok);
 }

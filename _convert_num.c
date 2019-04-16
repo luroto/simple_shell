@@ -8,7 +8,7 @@
  */
 char *_convert_num(int k)
 {
-	int a = k, b, c = 0, d = 0, e = 1, f = 0, m = 0, n = 0, l = 0;
+	int j = 0, a = k, b, c = 0, d = 0, e = 1, f = 0, m = 0, n = 0, l = 0;
 	char *x;
 
 	f = a;
@@ -20,10 +20,14 @@ char *_convert_num(int k)
 		c = 1;
 	}
 	c = b;
-	x = malloc(b + 1);
+	x = malloc(b + 2);
 	if (x == NULL)
 	{free(x);
 		return (NULL);
+	}
+	for (j = 0; j < (b + 2); j++)
+	{
+		x[j] = '\0';
 	}
 	for (; b > 0; b--, l++)
 	{       m = d / e;
@@ -38,6 +42,5 @@ char *_convert_num(int k)
 	}
 	if (f == 0)
 		x[0] = '0';
-	x[l + 1] = '\0';
 	return (x);
 }
